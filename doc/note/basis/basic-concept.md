@@ -12,7 +12,7 @@
 
 	ECMAScript中的语句以一个分号结尾；如果省略分号，则由解析器确定语句的结尾，
 
-* 关键字和保留字
+## 二、关键字和保留字
 
 ```
 	break do instanceof typeof case else new var catch 
@@ -20,11 +20,10 @@
 	function this with default if throw delete in try class 
 	enum extends super const export import class enum extends 
 	super const export import
-
 ```
-* 变量
+## 三、变量
 
-	ECMAScript的变量是松散类型的，所谓松散类型就是可以用来保存任何类型的数据。
+ECMAScript的变量是松散类型的，所谓松散类型就是可以用来保存任何类型的数据。
 
 ```js
 	var message;
@@ -41,45 +40,46 @@
 		found = false, 
 		age = 29;
 ```
-* 数据类型
+## 四、数据类型
 
-	ECMAScript中有5种简单数据类型（也称为基本基本数据类型）：
-	`Undefined`、 `Null` 、 `Boolean` 、 `Number` 和 `String`。
-	还有1种复杂数据类型—— `Object` ，`Object` 本质上是由一组无序的名值对组成的。
-	* `Undefined` 只有一个值，即特殊的 `undefined`。在使用 `var` 声明变量但未对其加以初始化时，这个变量的值就是 `undefined`
+ECMAScript中有5种简单数据类型（也称为基本基本数据类型）：
+`Undefined`、 `Null` 、 `Boolean` 、 `Number` 和 `String`。
+还有1种复杂数据类型—— `Object` ，`Object` 本质上是由一组无序的名值对组成的。
 
-	```js
-		var message; 
-		// 这个变量声明之后默认取得了 undefined 值 
-		// 下面这个变量并没有声明
-		// var age 
-		alert( typeof message); 
-		// "undefined" 
-		alert( typeof age); 
-		// "undefined"
-	```
+* `Undefined` 只有一个值，即特殊的 `undefined`。在使用 `var` 声明变量但未对其加以初始化时，这个变量的值就是 `undefined`
 
-	* `Null` 类型是第二个只有一个值的数据类型，这个特殊的值是 `null`。从逻辑角度来看，`null` 值表示一个空对象指针，而这也正是使用 `typeof` 操作符检测 `null` 值时会返回 "object" 的原因
+```js
+	var message; 
+	// 这个变量声明之后默认取得了 undefined 值 
+	// 下面这个变量并没有声明
+	// var age 
+	alert( typeof message); 
+	// "undefined" 
+	alert( typeof age); 
+	// "undefined"
+```
 
-	<p class="tip">如果定义的变量准备在将来用于保存对象，那么最好将该变量初始化为 `null` 而不是其他值。这样一来，只要直接检查`null`值就可以知道
-	</p>
+* `Null` 类型是第二个只有一个值的数据类型，这个特殊的值是 `null`。从逻辑角度来看，`null` 值表示一个空对象指针，而这也正是使用 `typeof` 操作符检测 `null` 值时会返回 "object" 的原因
 
-	```js
-		var car = null; alert( typeof car); // "object"
-		if (car != null){ 
-			// 对 car 对象执行某些操作 
-		}
-	```
-	<p class="tip">
-		实际上，undefined 值是派生自 null 值的，因此 ECMA- 262 规定对它们的相等性测试要返回 true
-	</p>
-	
-	```js
-		alert( null == undefined); //true
-	```
-	* Boolean 类型 true 和 false。 这两个值与数字值不是一回事，因此 true 不一定等于 1， 而 false 也不也不一定等于 0。
+<p class="tip">如果定义的变量准备在将来用于保存对象，那么最好将该变量初始化为 `null` 而不是其他值。这样一来，只要直接检查`null`值就可以知道
+</p>
 
-	* Number 类型
+```js
+	var car = null; alert( typeof car); // "object"
+	if (car != null){ 
+		// 对 car 对象执行某些操作 
+	}
+```
+<p class="tip">
+	实际上，undefined 值是派生自 null 值的，因此 ECMA- 262 规定对它们的相等性测试要返回 true
+</p>
+
+```js
+	alert( null == undefined); //true
+```
+* Boolean 类型 true 和 false。 这两个值与数字值不是一回事，因此 true 不一定等于 1， 而 false 也不也不一定等于 0。
+
+* Number 类型
 
 
 

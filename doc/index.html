@@ -16,11 +16,21 @@
             // 首页
             {title: 'Home', path: '/'},
             // 前端基础知识
-            {title: '犀牛书', type:'dropdown', path: '/language/chinese', items: [
-              {title: '基本概念', path: '/note/basis/basic-concept'}
-            ]}
+            {
+                title: '犀牛书', type:'dropdown', path: '', 
+                items: [
+                    { title: '基本概念', path: '/note/basis/basic-concept' }
+                ]
+            },
+            // 前端重要概念
+            {
+                title: '重要概念', type: 'dropdown', path:'',
+                items: [
+                    { title: '作用域和闭包', path: '/note/basis/scope-closure' }
+                ]
+            }
         ]
-})
+    })
   </script>
 </body>
 </html>
